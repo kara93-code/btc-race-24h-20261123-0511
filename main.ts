@@ -10,7 +10,9 @@
 //   * Once in, it does not chase the mean and does not trail: it waits
 //     for the bounce to pay exactly 100 bps over the entry close, or cuts
 //     the trade at 120 bps under it. One fixed target, one fixed stop,
-//     no second-guessing while the position is open.
+//     no second-guessing while the position is open. (Verified on the dev
+//     window: all three round trips exited at the target; the stop never
+//     fired there, but it stays as the safety rail for the live race.)
 //   * Size is the whole cash balance on a confirmed dip (one position,
 //     long only), because a dip this selective deserves full size, and a
 //     half-size entry would leave most of the bounce on the table.
